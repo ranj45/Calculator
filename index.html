@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right ,black,rgb(70, 70, 70));
+}
+
+
+.calculator{
+    border: 1px solid black;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0px 3px 10px grey;
+}
+
+
+.calculator > input{
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+   margin-bottom: 10px;
+
+}
+
+
+button{
+
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: 0px 3px 5px snow;
+    font-size: 28px;
+    color: antiquewhite;
+
+}
+
+button:hover{
+
+border: none;
+width: 60px;
+height: 60px;
+margin: 5px;
+border-radius: 20px;
+cursor: pointer;
+background-color: transparent;
+box-shadow: 0px 3px 5px red;
+font-size: 28px;
+color: antiquewhite;
+
+}
+
+.eqlbtn{
+    background-color: red;
+}
+
+
+
+.operator{
+    color: rgb(214, 87, 87);
+    background-color: transparent;
+    
+}
+
+
+
+.outer > h1 {
+    text-align: center;
+   margin: 20px;
+    text-shadow: 2px 2px 2px black;
+    font-size: 40px;
+    text-decoration: underline;
+    color: skyblue;
+    
+}
+
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+    
+<div class="outer">
+
+<h1> CALCULATOR </h1>
+
+<div class="calculator">
+
+
+ <input type="text" placeholder="0">
+
+
+<div>
+    <button class="operator" onclick="clear1()">AC</button>
+    <button class="operator" onclick="back()">Del</button>
+    <button class="operator"  onclick="addnum('%')">%</button>
+    <button class="operator"  onclick="addnum('/')">/</button>
+</div>
+
+<div>
+    <button class="button" onclick="addnum('7')">7</button>
+    <button class="button" onclick="addnum('8')">8</button>
+    <button class="button" onclick="addnum('9')">9</button>
+    <button class="operator"  onclick="addnum('*')">X</button>
+</div>
+
+<div>
+    <button class="button"   onclick="addnum('4')" >4</button>
+    <button class="button"   onclick="addnum('5')">5</button>
+    <button class="button"   onclick="addnum('6')">6</button>
+    <button class="operator" onclick="addnum('-')">-</button>
+</div>
+
+<div>
+    <button class="button"   onclick="addnum('1')">1</button>
+    <button class="button"   onclick="addnum('2')">2</button>
+    <button class="button"   onclick="addnum('3')">3</button>
+    <button class="operator" onclick="addnum('+')" >+</button>
+</div>
+
+<div>
+    <button class="button"  onclick="addnum('00')">00</button>
+    <button class="button"  onclick="addnum('0')">0</button>
+    <button class="button"  onclick="addnum('.')">.</button>
+    <button class="eqlbtn" onclick="calculate()">=</button>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<script src="./script.js"></script>
+
+</body>
+</html>
